@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<border xsi:noNamespaceSchemaLocation="InboxPage.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <title>InBox</title>
+    <use-taglib class="com.codename1.twitterui.TagLibrary"/>
+    <globalTabs layout-constraint="south" selectedTab="com.example.tweetapp.Tweetapp.INBOX_TAB"/>
+
+</border>

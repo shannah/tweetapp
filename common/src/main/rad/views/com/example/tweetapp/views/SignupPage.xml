@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<border view-controller="com.example.tweetapp.controllers.SignupPageViewController"
+        uiid="SignupPage"
+        safeArea="true"
+        xsi:noNamespaceSchemaLocation="SignupPage.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+    <define-category name="NEXT"/>
+    <define-category name="USE_PHONE"/>
+    <define-category name="USE_EMAIL"/>
+    <define-category name="ENTER_PHONE_OR_EMAIL"/>
+
+    <define-tag name="name" value="Person.name"/>
+    <define-tag name="phone" value="Person.telephone"/>
+    <define-tag name="email" value="Person.email"/>
+    <define-tag name="birthDate" value="Person.birthDate" type="java.util.Date"/>
+
+    <define-tag name="useEmail" type="boolean"/>
+    <define-tag name="editingPhoneOrEmail" type="boolean"/>
+    <define-tag name="phoneFieldFocused" type="boolean"/>
+    <define-tag name="emailFieldFocused" type="boolean"/>
+
+    <!-- Properties for error messages -->
+    <define-tag name="nameErrorMessage"/>
+    <define-tag name="phoneOrEmailErrorMessage"/>
+    <define-tag name="birthDateErrorMessage"/>
+
+    <title>
+        <label iconUIID="TwitterIcon" fontIcon="(char)0xe902" ></label>
+    </title>
+    <y layout-constraint="center" uiid="SignupPageContent" scrollableY="true">
+        <label uiid="SignupPageTitle">Create your account</label>
+        <radTextField
+                tag="name"
+                component.hint="Name"
+                component.uiid="TwitterTextField"
+                component.hintLabel.uiid="TwitterTextFieldHint"
+        />
+
+
+        <radLabel tag="nameErrorMessage"
+            bind-hidden="${nameErrorMessage}.isEmpty()"
+                  rad-transition="hidden 0.3s"
+                  component.uiid="FieldErrorMessage"
+        />
+
+
+        <button uiid="PhoneOrEmailButton"
+            text="Phone number or email address"
+                bind-hidden="${editingPhoneOrEmail}.bool"
+
+        >
+            <script>
+
+
+
+            it.addActionListener(evt -> {
+                evt.consume();
+                it.getComponentForm().setFormBottomPaddingEditingMode(true);
+                ${editingPhoneOrEmail}.setBoolean(true);
+                if (${useEmail}.bool) {
+                    emailTextField.getComponent().startEditingAsync();
+                } else {
+                    phoneTextField.getComponent().startEditingAsync();
+                }
+            });
+            </script>
+        </button>
+
+        <radTextField
+                rad-var="phoneTextField"
+                tag="phone"
+                bind-component.focus="phoneFieldFocused"
+                bind-hidden="${useEmail}.bool || !${editingPhoneOrEmail}.bool"
+                component.hint="Phone number"
+                component.uiid="TwitterTextField"
+                component.hintLabel.uiid="TwitterTextFieldHint"
+                component.constraint="TextArea.PHONENUMBER"
+        />
+
+        <radTextField
+                rad-var="emailTextField"
+                bind-hidden="!${useEmail}.bool || !${editingPhoneOrEmail}.bool"
+                tag="email"
+                component.hint="Email address"
+                component.uiid="TwitterTextField"
+                component.hintLabel.uiid="TwitterTextFieldHint"
+                component.constraint="TextArea.EMAILADDR"
+                bind-component.focus="emailFieldFocused"
+        >
+
+        </radTextField>
+
+        <radLabel tag="phoneOrEmailErrorMessage"
+            bind-hidden="${phoneOrEmailErrorMessage}.isEmpty()"
+                  rad-transition="hidden 0.3s"
+                  component.uiid="FieldErrorMessage"
+        />
+
+
+        <radDatePicker
+                tag="birthDate"
+                component.text="Date of birth"
+                component.uiid="TwitterDatePicker"
+        />
+
+        <radLabel tag="birthDateErrorMessage"
+                  bind-hidden="${birthDateErrorMessage}.isEmpty()"
+                  rad-transition="hidden 0.3s"
+                  component.uiid="FieldErrorMessage"
+        />
+    </y>
+    <border layout-constraint="south" uiid="SignupPageSouth">
+        <x layout-constraint="west">
+            <button text="Use Email Address"
+                    bind-hidden="!${phoneFieldFocused}.bool"
+                    uiid="TextFieldToggleButton"
+            >
+                <script>
+                    it.addActionListener(evt->{
+                       ${useEmail}.setBoolean(true);
+                        emailTextField.startEditingAsync();
+                    });
+                </script>
+            </button>
+
+
+            <button text="Use Phone"
+                    bind-hidden="!${emailFieldFocused}.bool"
+                    uiid="TextFieldToggleButton"
+            >
+                <script>
+                    it.addActionListener(evt->{
+                        ${useEmail}.setBoolean(false);
+                        phoneTextField.startEditingAsync();
+                    });
+                </script>
+            </button>
+        </x>
+        <x layout-constraint="east">
+            <button  uiid="TwitterNextButton" text="Next">
+                <bind-action category="NEXT"/>
+            </button>
+        </x>
+
+    </border>
+
+
+</border>

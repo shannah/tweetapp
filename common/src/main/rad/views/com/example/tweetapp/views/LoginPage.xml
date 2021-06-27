@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<border view-controller="com.example.tweetapp.controllers.LoginPageViewController"
+        uiid="SignupPage"
+        safeArea="true"
+        componentForm.formBottomPaddingEditingMode="true"
+        xsi:noNamespaceSchemaLocation="LoginPage.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+    <define-category name="LOGIN"/>
+
+    <define-tag name="phoneEmailOrUsername"/>
+    <define-tag name="password"/>
+
+    <!-- Properties for error messages -->
+    <define-tag name="phoneEmailOrUsernameErrorMessage"/>
+    <define-tag name="passwordErrorMessage"/>
+
+    <title>
+        <label iconUIID="TwitterIcon" fontIcon="(char)0xe902" ></label>
+    </title>
+    <y layout-constraint="center" uiid="SignupPageContent" scrollableY="true">
+        <label uiid="SignupPageTitle">Login to Tweet App</label>
+        <radTextField
+                tag="phoneEmailOrUsername"
+                component.hint="Phone, email or username"
+                component.uiid="TwitterTextField"
+                component.hintLabel.uiid="TwitterTextFieldHint"
+                component.constraint="TextArea.USERNAME"
+        />
+
+        <radLabel tag="phoneEmailOrUsernameErrorMessage"
+                  bind-hidden="${phoneEmailOrUsernameErrorMessage}.isEmpty()"
+                  rad-transition="hidden 0.3s"
+                  component.uiid="FieldErrorMessage"
+        />
+
+        <radTextField
+                tag="password"
+                component.hint="Password"
+                component.uiid="TwitterTextField"
+                component.hintLabel.uiid="TwitterTextFieldHint"
+                component.constraint="TextArea.PASSWORD"
+        />
+
+
+        <radLabel tag="passwordErrorMessage"
+                  bind-hidden="${passwordErrorMessage}.isEmpty()"
+                  rad-transition="hidden 0.3s"
+                  component.uiid="FieldErrorMessage"
+        />
+
+
+    </y>
+    <border layout-constraint="south" uiid="SignupPageSouth">
+        <x layout-constraint="west">
+            <button  uiid="TwitterFooterAction" rad-href="#ForgotPassword">
+                Forgot Password?
+            </button>
+        </x>
+        <x layout-constraint="east">
+            <button  uiid="TwitterNextButton" text="Log in">
+                <bind-action category="LOGIN"/>
+            </button>
+        </x>
+
+    </border>
+
+
+</border>
+

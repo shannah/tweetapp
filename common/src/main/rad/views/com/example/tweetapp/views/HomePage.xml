@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<border view-controller="com.example.tweetapp.controllers.HomePageViewController"
+        xsi:noNamespaceSchemaLocation="HomePage.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <title hidden="true"/>
+
+    <use-taglib class="com.codename1.twitterui.TagLibrary"/>
+    <import>
+        import com.example.tweetapp.providers.NewsFeedProvider;
+    </import>
+
+    <collapsibleHeader scrollableComponent="#tweetList">
+        <twtTitle>
+            <twtsearchButton rad-href="#SearchForm" rad-href-trigger="TWTSearchButton.SEARCH_ACTION"/>
+        </twtTitle>
+    </collapsibleHeader>
+    <sidebar>
+        <twtSideBarView/>
+    </sidebar>
+
+
+    <tweetListView
+            name="tweetList"
+            layout-constraint="center"
+            provider="NewsFeedProvider.class"
+    />
+
+    <globalTabs layout-constraint="south" selectedTab="com.example.tweetapp.Tweetapp.HOME_TAB"/>
+
+</border>

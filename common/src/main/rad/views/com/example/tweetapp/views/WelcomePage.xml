@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<borderAbsolute
+        safeArea="true"
+        uiid="WelcomePage"
+        xsi:noNamespaceSchemaLocation="WelcomePage.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <title hidden="true"/>
+    <center layout-constraint="north">
+        <label iconUIID="TwitterIcon" fontIcon="(char)0xe902" ></label>
+    </center>
+
+    <y layout-constraint="center" uiid="TwitterContentPane">
+        <spanLabel textUIID="TwitterHeading1">See what's happening in the world right now.</spanLabel>
+        <button uiid="TwitterButton" rad-href="#SignupPage">Create account</button>
+
+    </y>
+
+    <flow layout-constraint="south">
+        <label uiid="TwitterSmallLabel">Have an account already?</label>
+        <button uiid="TwitterSmallLink" rad-href="#LoginPage">Log in</button>
+    </flow>
+
+</borderAbsolute>

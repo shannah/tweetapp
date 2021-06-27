@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.codenameone:coderad-annotation-processor:2.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codenameone/coderad-annotation-processor/2.0-SNAPSHOT/coderad-annotation-processor-2.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codenameone/coderad-annotation-processor/2.0-SNAPSHOT/coderad-annotation-processor-2.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/codenameone/coderad-annotation-processor/2.0-SNAPSHOT/coderad-annotation-processor-2.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

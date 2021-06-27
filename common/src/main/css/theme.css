@@ -1,0 +1,165 @@
+#Constants {
+    includeNativeBool: true;
+    defaultFontSizeInt:'18';
+}
+
+/* Global Overrides */
+
+TitleArea {
+    border:none;
+    background-color:white;
+    margin:0;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.ttf');
+}
+
+WelcomePage {
+    padding: 10vw;
+    background-color: white;
+}
+
+TwitterButton {
+    cn1-derive: Button;
+    background-color: #1DA1F2;
+    color: white;
+    border: cn1-pill-border;
+    padding: 0.7rem;
+    font-size:1rem;
+}
+
+
+
+TwitterHeading1 {
+    font-size: 1.5rem;
+    font-family: 'native:MainBold';
+    color: black;
+    margin-bottom: 1rem;
+
+}
+
+TwitterSmallLabel {
+    cn1-derive: Label;
+    font-size: 0.7rem;
+    font-family: 'native:MainRegular';
+    padding:0;
+    margin:0;
+    color: #66757f;
+    margin-right: 1mm;
+}
+
+TwitterSmallLink {
+    cn1-derive: Button;
+    font-size: 0.7rem;
+    font-family: 'native:MainRegular';
+    padding:0;
+    margin:0;
+    color: #1DA1F2;
+}
+
+TwitterIcon {
+    font-family: icomoon;
+    font-size: 1.4rem;
+    color: #1DA1F2;
+}
+
+/** Signup Page Styles */
+
+SignupPage {
+    background-color:white;
+    margin:0;
+}
+
+SignupPageContent {
+    padding: 8vw;
+}
+
+SignupPageSouth {
+    padding:2mm;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    margin:0;
+    border-top: 1px solid gray;
+}
+
+SignupPageTitle {
+    cn1-derive: Label;
+    font-size: 1.2rem;
+    font-family: "native:MainBold";
+    text-align:center;
+    margin-bottom: 1.7rem;
+    color: black;
+}
+
+TwitterNextButton {
+    cn1-derive: Button;
+    background-color: #1DA1F2;
+    color: white;
+    border: cn1-pill-border;
+    padding: 0.5rem 0.75rem;
+
+    font-size: 0.7rem;
+    margin-right: 0;
+
+}
+
+TwitterTextField, TwitterTextFieldHint {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-size: 0.8rem;
+    font-family: "native:MainLight";
+    color: gray;
+}
+
+TwitterTextField {
+    cn1-derive: TextField;
+    border: none;
+    border-bottom: 0.8pt solid #ccc;
+    color: #333333;
+    margin-top: 1rem;
+    margin-bottom: 0.5mm;
+}
+
+TwitterDatePicker {
+    cn1-derive: TwitterTextField;
+    color: gray;
+}
+
+PhoneOrEmailButton {
+    cn1-derive: TwitterTextField;
+    color: gray;
+}
+
+TwitterTextFieldHint {
+    color: #66757f;
+
+}
+
+TextFieldToggleButton, TwitterFooterAction  {
+    cn1-derive: Button;
+    color: #1DA1F2;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.7rem;
+    margin:0;
+}
+
+FieldErrorMessage {
+    cn1-derive: Label;
+    font-size: 0.7rem;
+    color: white;
+    background-color:red;
+    padding: 1.5mm;
+    margin-top: 0;
+}
+
+TweetAction {
+    font-family: 'native:MainLight';
+    font-size: 2.3mm;
+    color: #888888;
+    padding: 2mm 2mm 2mm 0;
+
+}
+
