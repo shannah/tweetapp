@@ -3,6 +3,7 @@ package com.example.tweetapp;
 import static com.codename1.rad.util.NonNull.with;
 import static com.codename1.ui.CN.*;
 
+import com.codename1.components.ToastBar;
 import com.codename1.rad.controllers.ControllerEvent;
 import com.codename1.rad.nodes.ActionNode;
 import com.codename1.rad.ui.ActionStyle;
@@ -91,6 +92,19 @@ public class Tweetapp extends ApplicationController {
         ActionNode.builder()
             .label("Add Existing Account")
                 .addToController(this, TWTSideBarView.SIDEBAR_TOP_OVERFLOW_MENU, evt -> {});
+
+        ActionNode.builder()
+                .label("Sign out")
+                .addToController(this, TWTSideBarView.SIDEBAR_TOP_OVERFLOW_MENU, evt -> {
+                    lookup(TweetAppClient.class).createSignoutRequest().signout().onResult((res, err) -> {
+                        if (err != null) {
+                            Log.e(err);
+                            ToastBar.showErrorMessage("Failed to logout");
+                            return;
+                        }
+                        new WelcomePageController(this).showBack();
+                    });
+                });
 
         ActionNode.builder()
             .label("Settings and privacy")

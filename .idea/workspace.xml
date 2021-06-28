@@ -51,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/src/main/css/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.14306152" />
@@ -62,6 +62,7 @@
       <recent name="com.example.tweetapp.controllers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/common/src/main/css/fonts" />
     </key>
   </component>
@@ -792,22 +793,22 @@
       <screen x="-2560" y="-250" width="2560" height="1417" />
     </state>
     <state width="418" height="466" key="DebuggerActiveHint/-2560.-250.2560.1417/0.23.1680.1027@-2560.-250.2560.1417" timestamp="1624645832902" />
-    <state width="1458" height="357" key="GridCell.Tab.0.bottom" timestamp="1624815331345">
+    <state width="1459" height="320" key="GridCell.Tab.0.bottom" timestamp="1624901170231">
       <screen x="-2560" y="-250" width="2560" height="1417" />
     </state>
-    <state width="1458" height="357" key="GridCell.Tab.0.bottom/-2560.-250.2560.1417/0.23.1680.1027@-2560.-250.2560.1417" timestamp="1624815331345" />
-    <state width="1458" height="357" key="GridCell.Tab.0.center" timestamp="1624815331343">
+    <state width="1459" height="320" key="GridCell.Tab.0.bottom/-2560.-250.2560.1417/0.23.1680.1027@-2560.-250.2560.1417" timestamp="1624901170231" />
+    <state width="1459" height="320" key="GridCell.Tab.0.center" timestamp="1624901170230">
       <screen x="-2560" y="-250" width="2560" height="1417" />
     </state>
-    <state width="1458" height="357" key="GridCell.Tab.0.center/-2560.-250.2560.1417/0.23.1680.1027@-2560.-250.2560.1417" timestamp="1624815331343" />
-    <state width="1458" height="357" key="GridCell.Tab.0.left" timestamp="1624815331343">
+    <state width="1459" height="320" key="GridCell.Tab.0.center/-2560.-250.2560.1417/0.23.1680.1027@-2560.-250.2560.1417" timestamp="1624901170230" />
+    <state width="1459" height="320" key="GridCell.Tab.0.left" timestamp="1624901170229">
       <screen x="-2560" y="-250" width="2560" height="1417" />
     </state>
-    <state width="1458" height="357" key="GridCell.Tab.0.left/-2560.-250.2560.1417/0.23.1680.1027@-2560.-250.2560.1417" timestamp="1624815331343" />
-    <state width="1458" height="357" key="GridCell.Tab.0.right" timestamp="1624815331344">
+    <state width="1459" height="320" key="GridCell.Tab.0.left/-2560.-250.2560.1417/0.23.1680.1027@-2560.-250.2560.1417" timestamp="1624901170229" />
+    <state width="1459" height="320" key="GridCell.Tab.0.right" timestamp="1624901170230">
       <screen x="-2560" y="-250" width="2560" height="1417" />
     </state>
-    <state width="1458" height="357" key="GridCell.Tab.0.right/-2560.-250.2560.1417/0.23.1680.1027@-2560.-250.2560.1417" timestamp="1624815331344" />
+    <state width="1459" height="320" key="GridCell.Tab.0.right/-2560.-250.2560.1417/0.23.1680.1027@-2560.-250.2560.1417" timestamp="1624901170230" />
     <state width="1458" height="357" key="GridCell.Tab.1.bottom" timestamp="1624815331347">
       <screen x="-2560" y="-250" width="2560" height="1417" />
     </state>

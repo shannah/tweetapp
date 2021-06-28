@@ -235,6 +235,27 @@ public class TweetAppClient {
 
     }
 
+    public class SignoutResponse extends Response{}
+    public class SignoutRequest extends AsyncResource<SignoutResponse> {
+        public SignoutRequest signout() {
+            return TweetAppClient.this.signout(this);
+        }
+    }
+    public SignoutRequest createSignoutRequest() {
+        return new SignoutRequest();
+    }
+
+    private SignoutRequest signout(SignoutRequest req) {
+        SignoutResponse response = new SignoutResponse();
+        response.setResponseCode(200);
+        response.setMessage("Successfully logged out");
+        loggedInUserId = null;
+        loggedIn = false;
+        req.complete(response);
+        return req;
+
+    }
+
     public TweetAppClient() {
 
         // Logged in status tracked in preferences.
