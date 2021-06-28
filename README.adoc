@@ -4,6 +4,8 @@ A Twitter native mobile app clone demo app developed using https://github.com/sh
 
 This app was developed for https://shannah.github.io/CodeRAD/manual/#_app_example_1_a_twitter_clone[this tutorial].
 
+Use this app as a template to build your own app using https://start.codenameone.com/index.php?-table=app_templates&-action=browse&app_template_id=%3D6[Codename One initializr].
+
 == Screenshots
 
 .Welcome page
