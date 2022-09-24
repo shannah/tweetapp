@@ -78,7 +78,7 @@
       <dependency>
         <groupId>com.codenameone</groupId>
         <artifactId>coderad-annotation-processor</artifactId>
-        <version>2.0.2</version>
+        <version>2.0.4</version>
         <scope>provided</scope>
       </dependency>
     </dependencies>
