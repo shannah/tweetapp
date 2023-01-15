@@ -27,7 +27,7 @@
 	      <properties>
         <cn1.plugin.version>7.0.33</cn1.plugin.version>
         <cn1.version>7.0.33</cn1.version>
-              <coderad.version>2.0.3</coderad.version>
+              <coderad.version>2.0.5</coderad.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	      
         <java.version>1.8</java.version>
